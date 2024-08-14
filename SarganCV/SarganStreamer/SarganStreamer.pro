@@ -7,13 +7,15 @@ CONFIG -= qt
 SOURCES += \
         main.cpp
 
-OPENCV_VER = 480
-
 win32 {
-    INCLUDEPATH += c:\OpenCV-$${OPENCV_VER}\build\include\
-    LIBS += -Lc:\OpenCV-$${OPENCV_VER}\build\x64\vc16\bin
-    LIBS += -Lc:\OpenCV-$${OPENCV_VER}\build\x64\vc16\lib
-    LIBS += -lopencv_world$${OPENCV_VER}d
+    INCLUDEPATH += c:\opencv-4.10.0-build\install\include\
+
+    LIBS += c:\opencv-4.10.0-build\install\x64\vc17\lib\opencv_core4100.lib
+    LIBS += c:\opencv-4.10.0-build\install\x64\vc17\lib\opencv_highgui4100.lib
+    LIBS += c:\opencv-4.10.0-build\install\x64\vc17\lib\opencv_imgcodecs4100.lib
+    LIBS += c:\opencv-4.10.0-build\install\x64\vc17\lib\opencv_features2d4100.lib
+    LIBS += c:\opencv-4.10.0-build\install\x64\vc17\lib\opencv_videoio4100.lib
+    LIBS += c:\opencv-4.10.0-build\install\x64\vc17\lib\opencv_imgproc4100.lib
 }
 unix {
     INCLUDEPATH += /usr/include/opencv4
